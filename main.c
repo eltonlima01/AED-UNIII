@@ -12,7 +12,7 @@ int main(){
     Usuario *topo=NULL;
     char nome[50], user[50], email[50], senha[50];
 
-    FILE *file0; //Ponteiro para o arquivo de texto dos usu·rios;
+    FILE *file0; //Ponteiro para o arquivo de texto dos usu√°rios;
     file0=fopen("C:\\Users\\01\\Documents\\Projetos\\AED-UNIII\\Arquivos\\usuarios.txt", "a+");
     if(file0==NULL){
         perror("[ERRO]");
@@ -28,18 +28,18 @@ int main(){
     short int opcao;
 
     do{
-        puts("[SISTEMA]\n1. Entrar\n2. Cadastre-se\n3. Exibir usu·rios\n0. Sair");
+        puts("[SISTEMA]\n1. Entrar\n2. Cadastre-se\n3. Exibir usu√°rios\n0. Sair");
         scanf("%hi", &opcao); limpar_buffer();
 
         switch(opcao){
             case 1: //Entrar;
 
-            printf("[ENTRAR]\n1.1. Usu·rio: ");
+            printf("[ENTRAR]\n1.1. Usu√°rio: ");
             scanf("%49s", user); limpar_buffer();
 
             if(validarusuario(topo, user)!=1){
 
-                puts("===================================\n[ERRO] Nome de usu·rio N„o encontrado.\n===================================");
+                puts("===================================\n[ERRO] Nome de usu√°rio N√£o encontrado.\n===================================");
                 break;
 
             }
@@ -49,7 +49,7 @@ int main(){
 
             if(validarsenha(topo, senha, opcao)==0){
 
-                puts("===================================\n[ERRO] Senha inv·lida.\n===================================");
+                puts("===================================\n[ERRO] Senha inv√°lida.\n===================================");
                 break;
 
             }
@@ -72,38 +72,38 @@ int main(){
 
                 if(nome[i]=='.'){
 
-                    puts("[ERRO] Caractere '.' n„o permitido.");
+                    puts("[ERRO] Caractere '.' n√£o permitido.");
 
                     break;
                 }
             }
 
-            puts("2.2. Crie um nome de usu·rio:");
+            puts("2.2. Crie um nome de usu√°rio:");
             scanf("%49s", user); limpar_buffer();
 
             if(validarusuario(topo, user)==1){
 
-                puts("===================================\n[ERRO] Nome de usu·rio n„o disponÌvel.\n===================================");
+                puts("===================================\n[ERRO] Nome de usu√°rio n√£o dispon√≠vel.\n===================================");
                 break;
 
             }else if(validarusuario(topo, user)==2){
 
-                puts("===================================\n[ERRO] Nome de usu·rio muito curto.\n===================================");
+                puts("===================================\n[ERRO] Nome de usu√°rio muito curto.\n===================================");
                 break;
 
             }
 
-            puts("2.3. Digite o seu endereÁo de e-mail:");
+            puts("2.3. Digite o seu endere√ßo de e-mail:");
             scanf("%49s", email); limpar_buffer();
 
             if(validaremail(topo, email)==1){
 
-                puts("===================================\n[ERRO] EndereÁo de e-mail n„o disponÌvel.\n===================================");
+                puts("===================================\n[ERRO] Endere√ßo de e-mail n√£o dispon√≠vel.\n===================================");
                 break;
 
             }else if(validaremail(topo, email)==2){
 
-                puts("===================================\n[ERRO] AusÍncia de caractere '@'.\n===================================");
+                puts("===================================\n[ERRO] Aus√™ncia de caractere '@'.\n===================================");
                 break;
 
             }
@@ -119,7 +119,7 @@ int main(){
 
             case 3:
 
-                puts("[EXIBIR USU¡RIOS]");
+                puts("[EXIBIR USU√ÅRIOS]");
                 exibirusuarios(topo);
 
             break;
@@ -144,7 +144,7 @@ int indiceproduto;
 typedef struct Produto{
     char nome[50];
     float preco;
-    int ID; //A vari·vel ID identifica se o produto est· em promoÁ„o (1) ou n„o (0);
+    int ID; //A vari√°vel ID identifica se o produto est√° em promo√ß√£o (1) ou n√£o (0);
 }Produto;
 
 void editarproduto(int indice, Produto *produto, FILE *file1);
@@ -155,7 +155,7 @@ void menuinterno(){
     FILE *file1; //Ponteiro para o arquivo de texto dos produtos;
     file1=fopen("C:\\Users\\01\\Documents\\Projetos\\AED-UNIII\\Arquivos\\produtos.txt", "r+");
 
-    int indice=0,capacidade=10; //Õndice de quantidade ativa de produtos, e Capacidade de produtos m·ximos;
+    int indice=0,capacidade=10; //√çndice de quantidade ativa de produtos, e Capacidade de produtos m√°ximos;
 
     Produto *produto=(Produto*)malloc(capacidade*sizeof(Produto));
 
@@ -179,7 +179,7 @@ void menuinterno(){
     do{
 
         printf("[SISTEMA]\n1. Cadastrar novo produto\n2. Editar produto\n3. Exibir produtos\n4. Excluir produto\n");
-        printf("5. Cadastrar produto para promoÁ„o\n6. Exibir produtos em promoÁ„o\n7. Remover produto da promoÁ„o\n");
+        printf("5. Cadastrar produto para promo√ß√£o\n6. Exibir produtos em promo√ß√£o\n7. Remover produto da promo√ß√£o\n");
         printf("0. Sair\n");
         scanf("%hi", &opcao); limpar_buffer();
 
@@ -193,13 +193,13 @@ void menuinterno(){
 
                 if(nome[i]=='.'){
 
-                    puts("[ERRO] Caractere '.' n„o permitido.");
+                    puts("[ERRO] Caractere '.' n√£o permitido.");
                     break;
 
                 }
             }
 
-            puts("1.2. Digite o preÁo do produto:");
+            puts("1.2. Digite o pre√ßo do produto:");
             scanf("%f", &preco); limpar_buffer();
 
 
@@ -229,47 +229,50 @@ void menuinterno(){
 
             break;
 
-            case 3: break;
-
-            case 4:
+            case 3:
             
             puts("[LISTA DE PRODUTOS]");
 
             for(int i=0; i<indice; i++){
 
-                printf("%i. Nome do produto: %s / PreÁo: R$%.2f\n", i+1, produto[i].nome, produto[i].preco);
+                printf("%i. Nome do produto: %s / Pre√ßo: R$%.2f\n", i+1, produto[i].nome, produto[i].preco);
 
             }
+            
+            break;
+
+            case 4:
 
             break;
 
             case 5:
             
-            puts("[CADASTRAR PRODUTO PARA PROMO«√O]\n5.1. Digite o nome do produto:");
+            puts("[CADASTRAR PRODUTO PARA PROMO√á√ÉO]\n5.1. Digite o nome do produto:");
             scanf("%49[^\n]", nome); limpar_buffer();
             
             compararproduto(nome, indice, produto);
 
             if(indiceproduto==-1){
 
-                puts("[ERRO] Produto n„o encontrado.");
+                puts("[ERRO] Produto n√£o encontrado.");
                 break;
 
             }else{
 
                 produto[indiceproduto].ID=1;
-                puts("[CONCL⁄IDO] Produto cadastrado para promoÁ„o!");
+                puts("[CONCL√öIDO] Produto cadastrado para promo√ß√£o!");
 
             }
             
             break;
+
             case 6:
             
-            puts("[LISTA DE PRODUTOS EM PROMO«√O]\n");
+            puts("[LISTA DE PRODUTOS EM PROMO√á√ÉO]\n");
 
             for(int i=0, j=1; i<indice; i++){
                 if(produto[i].ID==1){
-                    printf("%i. Nome: %s / PreÁo: %.2f\n", j, produto[i].nome, produto[i].preco);
+                    printf("%i. Nome: %s / Pre√ßo: %.2f\n", j, produto[i].nome, produto[i].preco);
                     j++;
                 }
             }
@@ -278,21 +281,22 @@ void menuinterno(){
 
             case 7:
 
-            puts("[REMOVER PRODUTO DA PROMO«√O]\n7.1. Digite o nome do produto:");
+            puts("[REMOVER PRODUTO DA PROMO√á√ÉO]\n7.1. Digite o nome do produto:");
             scanf("%49[^\n]", nome); limpar_buffer();
 
             compararproduto(nome, indice, produto);
 
             if(indiceproduto==-1){
 
-                puts("[ERRO] Produto n„o encontrado.");
+                puts("[ERRO] Produto n√£o encontrado.");
                 break;
 
             }else{
 
                 produto[indiceproduto].ID=0;
-                puts("[CONCLUÕDO] Produto removido da promoÁ„o.");
+                puts("[CONCLU√çDO] Produto removido da promo√ß√£o.");
             }
+
             break;
 
             case 0:
@@ -317,7 +321,7 @@ void compararproduto(char s[], int indice, Produto *p){
     for(j=0; j<indice; j++){
         if(strcmp(p[j].nome, s)==0){
 
-            indiceproduto=j; //Essa funÁ„o iguala indiceproduto ao Ìndice do usu·rio com o nome desejado;
+            indiceproduto=j; //Essa fun√ß√£o iguala indiceproduto ao √≠ndice do usu√°rio com o nome desejado;
 
             break;
         }
@@ -325,7 +329,7 @@ void compararproduto(char s[], int indice, Produto *p){
 
     if(j==indice){
 
-        indiceproduto=-1; //indiceproduto È -1 caso n„o encontre produtos com nomes iguais;
+        indiceproduto=-1; //indiceproduto √© -1 caso n√£o encontre produtos com nomes iguais;
 
     }
 }
@@ -341,7 +345,7 @@ void editarproduto(int indice, Produto *produto, FILE *file1){
     
     if(indiceproduto==-1) {
 
-        puts("[ERRO] Produto n„o encontrado.");
+        puts("[ERRO] Produto n√£o encontrado.");
         return;
 
     }
@@ -350,7 +354,7 @@ void editarproduto(int indice, Produto *produto, FILE *file1){
 
     printf("[EDITAR PRODUTO] Produto encontrado: %s / R$%.2f\n", produto[indiceproduto].nome, produto[indiceproduto].preco);
 
-    printf("Digite o novo nome do produto (ou deixe em branco para n„o alterar):\n");
+    printf("Digite o novo nome do produto (ou deixe em branco para n√£o alterar):\n");
     fgets(nome, sizeof(nome), stdin); limpar_buffer();
 
     if(strlen(nome)>1){
@@ -360,7 +364,7 @@ void editarproduto(int indice, Produto *produto, FILE *file1){
 
     }
 
-    printf("Digite o novo preÁo do produto (ou -1 para n„o alterar):\n");
+    printf("Digite o novo pre√ßo do produto (ou -1 para n√£o alterar):\n");
     scanf("%f", &preco); limpar_buffer();
     if(preco>=0) {
         produto[indiceproduto].preco=preco;
