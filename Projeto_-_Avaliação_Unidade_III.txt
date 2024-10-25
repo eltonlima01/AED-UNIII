@@ -1,0 +1,7 @@
+Nesta atividade,
+o aluno deve complementar a entrega do projeto na Unidade II (a aplicação corrente deve ter os mesmos requisitos que a avaliação anterior),
+para incluir o seguinte:
+
+1. Utilizar Lista (substituir os vetores utilizados na unidade anterior para lidar com estruturas para utilizar Lista)
+
+2. Adicionar o seu código ao GitHub
