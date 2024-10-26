@@ -40,14 +40,14 @@ short int validarusuario(Usuario *topo, char c[]){
 
     if(c[0]=='\0'||strlen(c)<5){
 
-        return 2; //Retorna 2 caso o nomu de usuário seja muito curto;
+        return 2; //Retorna 2 caso o nomu de usuÃ¡rio seja muito curto;
     }
 
     while(atual!=NULL){
 
         if(strcmp((*atual).user, c)==0){
 
-            return 1; //Retorna 1 caso encontre nomes de usuário iguais;
+            return 1; //Retorna 1 caso encontre nomes de usuÃ¡rio iguais;
         }
 
         indiceusuario++;
@@ -55,7 +55,7 @@ short int validarusuario(Usuario *topo, char c[]){
         atual=(*atual).prox;
     }
 
-    return 0; //Retorna 0 caso o contrário;
+    return 0; //Retorna 0 caso o contrÃ¡rio;
 
 }
 
@@ -70,7 +70,7 @@ short int validaremail(Usuario *topo, char c[]){
 
     if(x==y){
 
-        return 2; //Retorna 2 caso não haja caractere '@';
+        return 2; //Retorna 2 caso nÃ£o haja caractere '@';
     }
 
     Usuario *atual=topo;
@@ -78,13 +78,13 @@ short int validaremail(Usuario *topo, char c[]){
     while(atual!=NULL){
         if(strcmp((*atual).email, c)==0){
 
-            return 1; //Retorna 1 caso encontre endereços de e-mail iguais;
+            return 1; //Retorna 1 caso encontre endereÃ§os de e-mail iguais;
         }
 
         atual=(*atual).prox;
     }
 
-    return 0; //Retorna 0 caso o contrário;
+    return 0; //Retorna 0 caso o contrÃ¡rio;
 
 }
 
@@ -103,7 +103,7 @@ short int validarsenha(Usuario *topo, char c[], short int si){
         atual=(*atual).prox;
     }
 
-    return 0; //Retorna 0 caso contrário;
+    return 0; //Retorna 0 caso contrÃ¡rio;
 
     }else{
 
@@ -118,10 +118,10 @@ short int validarsenha(Usuario *topo, char c[], short int si){
 
             strcpy(usuariologado, (*atual).nome);
 
-            return 1; //Validação bem sucedida de senha;
+            return 1; //ValidaÃ§Ã£o bem sucedida de senha;
         }
 
-        return 0; //Caso contrário;
+        return 0; //Caso contrÃ¡rio;
    
     }
 
